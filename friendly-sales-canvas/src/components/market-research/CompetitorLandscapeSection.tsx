@@ -364,7 +364,7 @@ const CompetitorLandscapeSection: React.FC<CompetitorLandscapeSectionProps> = ({
           
           result = await apiFetchJson('market-research', {
             method: 'POST',
-            body: JSON.stringify(payload)
+            body: payload
           });
 
           console.log('✅ Competitor Landscape - API call successful');

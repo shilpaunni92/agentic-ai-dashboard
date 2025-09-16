@@ -1682,13 +1682,13 @@ const MarketResearch = React.memo(() => {
           'Pragma': 'no-cache',
           'Expires': '0'
         },
-        body: JSON.stringify({
+        body: {
           component_name: "market_intelligence",
           user_id: "user_123",
           refresh: true,
           _timestamp: Date.now(), // Add timestamp to ensure fresh data
           _cache_bust: Math.random().toString(36).substring(7)
-        })
+        }
       });
 
       console.log('📊 Market intelligence data:', apiResponse);
